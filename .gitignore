@@ -1,0 +1,55 @@
+# create a don't-ignore list (a list of file types that should be tracked by git)
+# please do not use the '**/' pattern, because it "is available in Git since version 1.8.2"
+#
+# 0 ignore -> don't ignore list
+# 1 c++ files
+# 2 shader files
+# 3 CUDA files
+# 4 CMake files
+# 5 .gitignore file
+# 6 readme files
+# 7 ignore build directories
+
+### 0 ignore -> don't ignore list ###
+# ignore everything
+*.*
+
+### 1 C++ files ###
+# don't ignore c++ files
+!*.cpp
+!*.hpp
+!*.h
+
+### 2 shader files
+# don't ignore shader files
+!*.dom
+!*.frag
+!*.geom
+!*.hull
+!*.vert
+
+### 3 CUDA files 
+# don't ignore CUDA files
+!*.cu
+
+### 4 CMakeLists.txt ##
+# don't ignore CMakeLists.txt files
+!CMakeLists.txt
+!*.cmake
+
+### 5 .gitignore ###
+# don't ignore .gitignore files
+!.gitignore
+
+### 6 readme fiels
+!*.md
+
+### 7 build directories
+# This must be done in the end in order 
+# to not track files, that have been
+# copied into build directory.
+# ignore build directory
+/build
+/external
+
+
